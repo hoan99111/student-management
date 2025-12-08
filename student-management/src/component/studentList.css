@@ -1,0 +1,110 @@
+.student-table {
+  width: 100%;
+}
+.col{
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.sort-indicator{
+  visibility: hidden;
+}
+
+.col.name{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.col.name:hover .sort-indicator{
+  visibility: visible;
+
+}
+
+
+.student-table-header {
+  display: grid;
+  grid-template-columns: 1fr 80px 120px 160px;
+  gap: 12px;
+  padding: 8px 12px;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.student-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.student-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 120px 160px;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+  background: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+
+.student-meta {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.student-actions {
+  display: flex;
+  gap: 8px;
+  justify-self: end;
+}
+
+.btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn.edit {
+  background: #06b6d4;
+  color: white;
+}
+.btn.delete {
+  background: #ef4444;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+  transition: all 0.2s ease;
+}
+
+.edit {
+  margin-right: 8px;
+}
+
+@media (max-width: 640px) {
+  .student-table-header {
+    display: none;
+  }
+  .student-row {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .student-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
